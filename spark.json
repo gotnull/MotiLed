@@ -1,0 +1,7 @@
+{
+    "name": "MotiLed",
+    "version": "1.0.0",
+    "author": "Ladislas de Toldi <ladislas at weareleka dot com> and Leka <http://weareleka.com>",
+    "license": "GNU General Public License",
+    "description": "This library is part of Moti, a spherical robotic smart toy for autistic children. <https://raw.githubusercontent.com/WeAreLeka/moti/>"
+}
