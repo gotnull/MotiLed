@@ -26,7 +26,7 @@
  * @version 1.0
  */
 
-#include <Arduino.h>
+#include <application.h>
 #include "MotiColor.h"
 
 /**
