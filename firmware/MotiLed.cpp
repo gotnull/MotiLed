@@ -30,7 +30,7 @@
  * @brief Default constructor
  */
 MotiLed::MotiLed() {
-	_colorValue = Color(0, 0, 0);
+	_colorValue = MotiColor(0, 0, 0);
 }
 
 /**
@@ -44,7 +44,7 @@ MotiLed::MotiLed(uint8_t redPin, uint8_t greenPin, uint8_t bluePin) {
 	_greenPin = greenPin;
 	_bluePin = bluePin;
 
-	_colorValue = Color(0, 0, 0);
+	_colorValue = MotiColor(0, 0, 0);
 }
 
 /**
@@ -54,7 +54,7 @@ MotiLed::MotiLed(uint8_t redPin, uint8_t greenPin, uint8_t bluePin) {
  * @param bluePin the blue pin
  * @param color the start color
  */
-MotiLed::MotiLed(uint8_t redPin, uint8_t greenPin, uint8_t bluePin, Color colorValue) {
+MotiLed::MotiLed(uint8_t redPin, uint8_t greenPin, uint8_t bluePin, MotiColor colorValue) {
 	MotiLed(redPin, greenPin, bluePin);
 	_colorValue = colorValue;
 }
@@ -72,7 +72,7 @@ void MotiLed::shine(void) {
  * @brief Tells the MotiLed to shine with a given color
  * @param color the color the MotiLed will shine
  */
-void MotiLed::shine(Color colorValue) {
+void MotiLed::shine(MotiColor colorValue) {
 	setColor(colorValue);
 	shine();
 }
@@ -82,7 +82,7 @@ void MotiLed::shine(Color colorValue) {
  * @param color the color the MotiLed will shine
  */
 void MotiLed::shine(uint8_t redValue, uint8_t greeValue, uint8_t blueValue) {
-	setColor(Color(redValue, greeValue, blueValue));
+	setColor(MotiColor(redValue, greeValue, blueValue));
 	shine();
 }
 
@@ -90,14 +90,14 @@ void MotiLed::shine(uint8_t redValue, uint8_t greeValue, uint8_t blueValue) {
  * @brief Tells the MotiLed to stop shining
  */
 void MotiLed::turnOff(void) {
-	setColor(Color(0, 0, 0));
+	setColor(MotiColor(0, 0, 0));
 	shine();
 }
 
 /**
  * @brief Getter method to get the color of the MotiLed
  */
-Color MotiLed::getColor(void) {
+MotiColor MotiLed::getColor(void) {
 	return _colorValue;
 }
 
@@ -105,6 +105,6 @@ Color MotiLed::getColor(void) {
  * @brief Setter method to set the color of the MotiLed
  * @param color the new color of the MotiLed
  */
-void MotiLed::setColor(Color colorValue) {
+void MotiLed::setColor(MotiColor colorValue) {
 	_colorValue = colorValue;
 }
